@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>แบบฟอร์มจองทัวร์</h1>
+
+<body> 
+<fieldset>
+<fieldset>
+    <form action="form-echo.php">
+    <legend>ข้อมูลทั่วไป </legend>
+    <q1>ชื่อ-สกุล:</q1><br>
+    <input 
+     type="text" 
+     name ="name" 
+     placeholder="กรอกชื่อ-สกุล"
+     pattern="^[ก-๏\s]+$"
+     required > *
+
+    <br>
+    <q1>Email:</q1><br>
+    <input
+    type="email"
+    name ="email">*<br>
+    
+    <q1>โทรศัพท์:</q1><br>
+    <input type="tel"
+    value="+66"
+    name ="phone" 
+    pattern="+66[7-9]{1}[0-9]{9}">*</br>
+    
+
+    <q1>ที่อยู่:</q1><br>
+    <textarea name="address" id="address" cols="35" rows="4"></textarea></br>
+   
+    <q1> รหัสไปรษณีย์: </q1>
+    <input 
+    type="text"
+    name="zipcode"
+    pattern="[0-9]{5}"
+    size="8" 
+><br>
+    
+    <q1>รูปผู้จอง: </q1>
+    <input type="file" <br>
+</fieldset>
+<fieldset>
+    <legend> ข้อมูลเข้าสู่ระบบ </legend>
+        <q1>Username:</q1><br>
+        <input 
+        type="text"
+        name ="username"
+        pattern="[A-Za-z0-9_]{8,}"><br>
+       <i> ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่ 8 ตัวขึ้นไป </i><br>
+    </p>
+    <p> 
+        <q1>Password:</q1><br>
+        <input
+        type="password"
+        name ="password"
+        pattern="{8,}"><br>
+        <i> ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป </i><br>
+    </p>
+    </fieldset>
+   
+<fieldset>
+  <legend> ข้อมูลทัวร์ที่ต้องการ</legend>
+        <q1>แพ็คเก็จทัวร์:</q1>
+        <select>
+        <option value = --select-- >--select-- </option>
+        <option value = "จีน">จีน</option>
+        <option value = "ญี่ปุ่น">ญี่ปุ่น</option>
+        <option value = "เกาหลี">เกาหลี</option>
+         <option value = "อเมริกา">อเมริกา</option>
+         <option value = "โปรตุเกส">โปรตุเกส</option>
+        </select><br>
+    
+        <q1>วันที่เดินทาง:</q1>
+        <input 
+        type="date"
+        name ="date"
+        id="date" <br>
+       
+        <br>
+       <q1> จำนวนผู้เดินทาง:</q1>
+        <input
+        type="number"
+        name="amount" ><br>
+
+        <q1>เน้นการท่องเที่ยวแบบใด?</q1><br>
+        <input type="checkbox" name="checkbox">ชอปปิ้ง<br>
+            <input type="checkbox" name="checkbox">ธรรมชาติ<br>
+            <input type="checkbox" name="checkbox">ทะเล
+    </p>
+</fieldset>
+</body>
+<q1>ยอมรับเงื่อนไขและข้อตกลง</q1>
+<input  type="radio" name="condition" checked >I agree 
+<input type="radio" name="condition" >I disagree 
+
+<input type="submit" value="จอง" >
+</fieldset>
+</html>
